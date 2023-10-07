@@ -11,3 +11,10 @@ The dataset consists of over 1000 image pairs generated from simulated sonar ima
 
 ## Training Script
 The training script consists of a python notebook meant to work with Google Colab and make use of their hardware acceleration capabilities.  It should be possible to use other IDEs and to change the hardware accelerator as needed, though this will require individual adaptation.
+### HonorsThesis.ipynb
+This script makes use of a traditional CNN denoising autoencoder.  This model runs but its effectiveness is limited by the fact that this dataset is so sparse which can be a challenge for CNNs.
+### TorchSParseDenoiser.ipynb
+This script attempts to use the MinkowskiEngine to do sparse convolution.  This proves promising for this application but I struggled to get a working implementation.
+
+## MinkowskiEngine
+This is a really helpful library for doing sparse convolution and generally doing machine learning on several types of sparse data use cases such as point clouds.  It does not seem fully tailored for the application this repo focuses on but seems to have potential if it can be worked through.  Documentation can be found at https://nvidia.github.io/MinkowskiEngine/ and the repo can be found at https://github.com/NVIDIA/MinkowskiEngine.
